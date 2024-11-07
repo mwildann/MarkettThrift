@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Thrifting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="MT.jpg" alt="Logo Markett_Thrift" class="logo"> <!-- Tambahkan logo di sini -->
+        <h1>Selamat Datang di Markett_Thrift Kami!</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Produk</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section id="home">
+        <h2>SOCIAL MEDIA</h2>
+        <li><a href="https://www.instagram.com/Markett_Thrift" target="_blank">
+            <img src="ig.png" alt="Instagram" style="width:24px; height:24px;">
+            <p>Instagram</p>
+        </a></li>
+        <li><a href="https://www.tiktok.com/@Markett_Thrift" target="_blank">
+            <img src="tiktok.png" alt="TikTok" style="width:24px; height:24px;">
+            <p>Tiktok</p>
+        </a></li>
+        <li><a href="https://wa.me/6282397074534" target="_blank">
+            <img src="w.png" alt="WhatsApp" style="width:24px; height:24px;">
+            <p>WhatsApp</p>
+        </a></li>
+        <p5>Temukan Produk Dibawah ini.</p5>
+    </section>
+
+    <section id="produk">
+        <h2>PRODUK TERBARU</h2>
+        <div class="produk-container">
+            <div class="produk-item">
+                <img src="g1.jpeg" alt="Produk 1">
+                <p>Deskripsi Produk 1</p>
+            </div>
+            <div class="produk-item">
+                <img src="g2.jpeg" alt="Produk 2">
+                <p>Deskripsi Produk 2</p>
+            </div>
+            <div class="produk-item">
+                <img src="g3.jpeg" alt="Produk 3">
+                <p>Deskripsi Produk 3</p>
+            </div>
+            <div class="produk-item">
+                <img src="g3.jpeg" alt="Produk 3">
+                <p>Deskripsi Produk 3</p>
+            </div>
+            <div class="produk-item">
+                <img src="g3.jpeg" alt="Produk 3">
+                <p>Deskripsi Produk 3</p>
+            </div>
+            <div class="produk-item">
+                <img src="g3.jpeg" alt="Produk 3">
+                <p>Deskripsi Produk 3</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p6>&copy; 2023 Markett_Thrift.</p6>
+    </footer>
+
+    <script>
+        // Smooth scroll to the section
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        // Menambahkan efek animasi saat ikon di-hover
+        document.querySelectorAll('#home a img').forEach(icon => {
+            icon.addEventListener('mouseover', () => {
+                icon.style.transform = 'rotate(15deg) scale(1.2)';
+                icon.style.backgroundColor = '#f0f0f0';  // Warna latar belakang saat di-hover
+            });
+            
+            icon.addEventListener('mouseleave', () => {
+                icon.style.transform = 'rotate(0deg) scale(1)';
+                icon.style.backgroundColor = 'transparent';
+            });
+        });
+    </script>
+    
+</body>
+</html>
